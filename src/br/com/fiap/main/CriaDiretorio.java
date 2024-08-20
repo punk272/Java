@@ -21,6 +21,10 @@ public class CriaDiretorio {
             if(!dir.exists()) {
                 dir.mkdir();
             }
+            dir = new File("d:/loja/site/imagens");
+            if(!dir.exists()) {
+                dir.mkdir();
+            }
 
             System.out.println("Pastas criadas com sucesso.");
         } catch (Exception e) {
