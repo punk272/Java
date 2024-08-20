@@ -10,7 +10,13 @@ public class ListaDiretorio {
                 String path = JOptionPane.showInputDialog("Digite o caminho da pasta (utilize / entre as pastas)");
                 File dir = new File(path);
                 if (dir.isDirectory()) {
-
+                    System.out.println("Conteúdo da pasta: " + path);
+                    String[] lista = dir.list();
+                    if (lista != null) {
+                        for (String item: lista) {
+                            System.out.println(item);
+                        }
+                    }
                 } else {
                     System.out.println("Caminho informado incorreto");
                 }
